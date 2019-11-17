@@ -10,6 +10,32 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Global site tag (gtag.js) - Google Ads: 981488686 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-981488686"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'AW-981488686');
+		</script>
+		<!-- Event snippet for 112 emergencias conversion page
+		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+		function gtag_report_conversion(url) {
+		  var callback = function () {
+		    if (typeof(url) != 'undefined') {
+		      window.location = url;
+		    }
+		  };
+		  gtag('event', 'conversion', {
+		      'send_to': 'AW-981488686/cMgiCLvXtbQBEK6ogdQD',
+		      'event_callback': callback
+		  });
+		  return false;
+		}
+		</script>
+
 	</head>
 	<body>
 
@@ -17,17 +43,13 @@
 			<header id="header" class="alt">
 				<div class="logo"><a href="index.html"><span>En memoria de mi primo Ivan</span></a></div>
 			</header>
-
-
-
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
 					<img src="images/slide01.jpg" alt="" />
 					<div class="inner">
 						<header>
-							<p>No te suicides, pide ayuda</p>
-							<h2>112 emergencias</h2>
+							<h2>No te suicides,</h2><h2>pide ayuda</h2>
 						</header>
 					</div>
 				</article>
@@ -41,7 +63,7 @@
 			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						<li><img src="images/telefono_112_g.png" alt="Call now!"width="250" height="150" onclick="return gtag_report_conversion('tel:112')"/>  </li>
 					</ul>
 				</div>
 			</footer>
